@@ -1,0 +1,2 @@
+class StillingerController < ApplicationController
+end
