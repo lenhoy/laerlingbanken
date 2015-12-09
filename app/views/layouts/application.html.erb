@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Laerlingbanken</title>
+  <title>Portfolio</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-inverse">
+	  <div class="container">
+	    <div class="row">
+	      <div id="logo-container" class="col-xs-2 hidden-xs"><div><img src="https://photos-1.dropbox.com/t/2/AAAztGH9dzOAR6MLZb_5-ZY3q8oeJmDQl91NYco5E7PjJA/12/416282756/png/32x32/1/_/1/2/logo.png/ELyKhqsDGAkgAigC/OmhqBO_UYeH5-SSLgnoYYioYZQY9CggxUZu0dCXbuC0?size=1024x768&size_mode=3"></div></div>
+	      <div class="col-sm-8 col-xs-11 text-center" id="tittel">
+	        <h1>Lrlingbanken</h1>
+          </div>
+        </div>
+      </div>
+</div>
 
 <%= yield %>
 

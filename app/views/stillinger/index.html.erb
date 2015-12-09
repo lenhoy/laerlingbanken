@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row filterRad">
+		<div class="col-sm-1 col-md-2 hidden-xs"> <!--Buffer--></div>
+		<div class="col-xs-12 col-sm-10 col-md-8">
+			<div class="row">
+				<span>
+				<input placeholder="Sk i stillinger" class="form-control" />
+				</span>
+			</div>
+			<div class="row">
+				<ul class="nav nav-pills filter">
+					<div class="col-xs-1 hidden-sm hidden-md hidden-lg"><!-- buffer pill --></div>
+					<li id="filter"class="col-xs-5 col-sm-3 col-md-2 text-center"><h4>Filter</h4></li>
+					<li id="favoritt" class="col-xs-5 col-sm-3 col-md-2 text-center"><h4>Favoritt</h4></li>
+				</ul>
+			</div>
+      <!--Filtermeny--> 
+			<div class="row">
+				<div class="col-xs-12 filterMeny"></div>
+			</div>
+		</div>
+		<div class="col-sm-1 col-md-2 hidden-xs"><!--Buffer--></div>
+	</div>
+  
+  <div class="feed-container">
+    <!-- Looper igjennom et "kort" av gangen -->
+    <% @stillinger.each do |stilling| %>
+    	<div class="card row">
+        
+        <div class="left-side row col-md-2">
+          <img src="<%= stilling.logo %>">
+          <p> <%= stilling.avstand %> </p> <br>
+          <p> <%= stilling.frist %> </p>
+        </div>
+        
+        <div class="middle row col-md-9">
+          <div class="navn col-md-12">
+            <h1> <%= stilling.stilling_navn %> </h1>
+          </div>
+          
+          <div class="col-md-4">
+            <%= stilling.yrke %> <br>
+            <%= stilling.krav_utdanning %> <br>
+            <%= link_to "Vis mer", soeknader_path %>
+          </div>
+          
+          <div class="beskrivelse col-md-8">
+            <p> <%= stilling.beskrivelse %> </p>
+          </div>
+        </div>
+        <div class="right col-md-1"></div>
+    	</div>
+    <% end %>
+  </div>
+  
+</div>

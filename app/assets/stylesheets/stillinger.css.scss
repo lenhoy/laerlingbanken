@@ -1,3 +1,48 @@
 // Place all the styles related to the Stillinger controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	
+}
+body {
+	background: url("https://photos-6.dropbox.com/t/2/AAD4DpcGVlXKDn9eGND2e_VLTBEr1ZmQSfDm8vPIxovsww/12/416282756/jpeg/32x32/1/_/1/2/bakgrunn.jpg/ELyKhqsDGAogAigC/6gh5Y-4ZMk2h6z3LiJADG-ud39vxfO9PrFzj5k9W61Y?size=1024x768&size_mode=3") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.filterRad {
+	margin-top: 50px;
+}
+#tittel {
+	color: white;
+}
+.form-control {
+	height: 40px;
+	font-size: 20px;
+}
+.filter {
+	margin-top: 10px;
+}
+.filter li {
+	margin: 5px 5px 0px 0px;
+	border-radius: 20px;
+	background-color: lightgrey;
+}
+#filter {
+	border-radius: 20px;
+}
+.underline {
+	text-decoration: underline;
+}
+.filterMeny {
+	display: none;
+	height: 200px;
+	background-color: lightgrey;
+	margin-top: -0.5px;
+	border-radius: 0px 5px 5px 5px;
+}

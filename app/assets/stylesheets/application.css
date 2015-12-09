@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+ 
+ .navbar {
+  border: none;
+}
+#logo-container {
+	height: 75px;
+}
+#logo-container div {
+	position: relative;
+  top: 10px;
+}
+#logo-container div img {
+	height: 55px;
+	width: 55px;
+}
