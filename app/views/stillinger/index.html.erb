@@ -1,6 +1,10 @@
 <div class="container">
 	<div class="row filterRad">
-		<div class="col-sm-1 col-md-2 hidden-xs"> <!--Buffer--></div>
+	
+		<!--Buffer-->
+		<div class="col-sm-1 col-md-2 hidden-xs"></div>
+		
+		<!-- faktisk innhold -->
 		<div class="col-xs-12 col-sm-10 col-md-8">
 			<div class="row">
 				<span>
@@ -22,31 +26,37 @@
 		<div class="col-sm-1 col-md-2 hidden-xs"><!--Buffer--></div>
 	</div>
   
-  <div class="feed-container">
+  <!-- Feed -->
+  <div class="feed-container row">
     <!-- Looper igjennom et "kort" av gangen -->
+	
     <% @stillinger.each do |stilling| %>
-    	<div class="card row">
+    	<div class="card media row col-md-8">
         
-        <div class="left-side row col-md-2">
-          <img src="<%= stilling.logo %>">
+        <div class="left-side media-left col-md-2">
+          <img class="media-object" "src="<%= stilling.logo %>">
           <p> <%= stilling.avstand %> </p> <br>
           <p> <%= stilling.frist %> </p>
         </div>
         
-        <div class="middle row col-md-9">
-          <div class="navn col-md-12">
-            <h1> <%= stilling.stilling_navn %> </h1>
-          </div>
+        <div class="middle media-body row col-md-9">
+    
+            <h1> 
+				<%= stilling.stilling_navn %> 
+				<small> <%= stilling.bedrift_nettside %> </small>
+			</h1>
+            <br>        
+			<div class="media">
+				<div class="media-left">
+					<p><%= stilling.yrke %></p> <br>
+					<p><%= stilling.krav_utdanning %></p> <br>
+					<%= link_to "Vis mer", soeknader_path %>
+				</div>
           
-          <div class="col-md-4">
-            <%= stilling.yrke %> <br>
-            <%= stilling.krav_utdanning %> <br>
-            <%= link_to "Vis mer", soeknader_path %>
-          </div>
-          
-          <div class="beskrivelse col-md-8">
-            <p> <%= stilling.beskrivelse %> </p>
-          </div>
+				<div class="media-body">
+					<p> <%= stilling.beskrivelse %> </p>
+				</div>
+			</div>
         </div>
         <div class="right col-md-1"></div>
     	</div>
