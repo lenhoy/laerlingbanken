@@ -1,4 +1,4 @@
-<div class="container row border">
+<div class="container row">
 	<!--Buffer-->
 	<div class="col-sm-1 col-md-2 hidden-xs"></div>
 	
@@ -20,7 +20,7 @@
 				
 				<ul class="nav nav-pills filter">
 					<li id="filter"class="col-xs-5 col-sm-3 col-md-2 text-center"><h4>Filter</h4></li>
-					<li id="favoritt" class="col-xs-5 col-sm-3 col-md-2 text-center"><h4>Favoritt</h4></li>
+					<li id="favoritt" class="col-xs-5 col-sm-3 col-md-2 text-center"><h4>Favoritter</h4></li>
 				</ul>
 			</div>
 				
@@ -30,36 +30,36 @@
 		</div>
   <!-- Feed -->
 
-  <!-- Looper igjennom et "kort" av gangen -->
+  <!-- Looper igjennom et "card" av gangen -->
 	
 		<% @stillinger.each do |stilling| %>
 		<div class="card row">
-			<div class="left-side col-xs-2">
-			  <img "src="<%= stilling.logo %>">
+			<div class="left-side media-left">
+			  <img src="<%= stilling.logo %>">
 			  <p> <%= stilling.avstand %> </p> <br>
-			  <p> <%= stilling.frist %> </p>
 			</div>
 			
-			<div class="middle col-md-9">
+			<div class="middle media-body">
 				
-				<div class="row">
-					<h1> 
-						<%= stilling.stilling_navn %> 
-						<small> <%= stilling.bedrift_nettside %> </small>
-					</h1>
-					<br>        
-					
-					<div class="pull-left">
-						<p><%= stilling.yrke %></p> <br>
-						<p><%= stilling.krav_utdanning %></p> <br>
-						<%= link_to "Vis mer", soeknader_path %>
-					</div>
-			  
-					<div class="beskrivelse">
-						<p> <%= stilling.beskrivelse %> </p>
-					</div>
+				<h1> 
+					<%= stilling.stilling_navn %> 
+					<small> <%= stilling.bedrift_nettside %> </small>
+				</h1>
+					   
+				
+				<div>
+					<p> 
+						<%= stilling.yrke %>. 
+						Stillingen krever <%= stilling.krav_utdanning %>
+					</p>
+				</div>
+		  
+				<div class="beskrivelse">
+					<p> <%= stilling.beskrivelse %> </p>
+					<%= link_to "Vis mer", soeknader_path %>
 				</div>
 			</div>
+			<p class="dato pull-right">Søknadsfrist: <%= stilling.frist %></p>
 		</div>
 		<% end %>
 	</div> 

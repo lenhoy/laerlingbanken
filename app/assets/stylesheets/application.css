@@ -14,6 +14,9 @@
  *= require_self
  */
  
+ * {
+	 font-family: "Roboto";
+ }
  .navbar {
   border: none;
 }
@@ -28,6 +31,7 @@
 	height: 55px;
 	width: 55px;
 }
-#tittel {
+#tittel h1 {
 	color: white;
+	font-weight: 500;
 }
