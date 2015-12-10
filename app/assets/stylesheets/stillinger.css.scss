@@ -6,7 +6,10 @@
 /* CSS Document */
 
 * {
-	
+
+}
+.border {
+	border: solid white 1px;
 }
 body {
 	background: url("https://photos-6.dropbox.com/t/2/AAD4DpcGVlXKDn9eGND2e_VLTBEr1ZmQSfDm8vPIxovsww/12/416282756/jpeg/32x32/1/_/1/2/bakgrunn.jpg/ELyKhqsDGAogAigC/6gh5Y-4ZMk2h6z3LiJADG-ud39vxfO9PrFzj5k9W61Y?size=1024x768&size_mode=3") no-repeat center center fixed; 
@@ -15,11 +18,15 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-.filterRad {
+.container {
+	margin: 0px;
+	width: 100%;
+}
+.innhold {
 	margin-top: 50px;
 }
-#tittel {
-	color: white;
+.soekeboks {
+	margin: 0px;
 }
 .form-control {
 	height: 40px;
@@ -49,7 +56,10 @@ body {
 
 /* Innhold kort */
 
+.feed-container {
+	background-color: black;
+}
 .card {
-	margin: auto;
+	padding: 0px;
 	background-color: white;
 }
